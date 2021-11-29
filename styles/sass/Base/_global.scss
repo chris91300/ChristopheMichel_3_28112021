@@ -1,0 +1,26 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: $font-text;
+    color: $black;
+}
+
+main{
+    width: 100%;
+}
+
+h1, h2, h3{
+    font-family: $font-title;
+    font-weight: lighter;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
