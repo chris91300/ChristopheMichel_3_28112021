@@ -1,0 +1,72 @@
+@use "sass:map";
+
+.step-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    @media screen and (min-width : map.get($breakpoints, tablette)) {
+        
+        .step:nth-child(2){
+            align-self: center;
+        }
+
+        .step:first-child{
+            align-self: flex-start;
+        }
+    }
+
+    .step{
+        width: calc(100% - 0.5em);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $light-grey;
+        border-radius: 30px;
+        box-shadow: 1px 5px 5px lightgrey;
+        padding: 2em 0;
+        margin: 10px 0;
+        transition: background-color $transition-duration;
+
+        @media screen and (min-width : map.get($breakpoints, tablette)){
+            width: 40%;
+        }
+    
+        & p{
+    
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            position: relative;
+            left: -0.5em;
+    
+            & span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                color: white;
+                background-color: $primary-color;
+            }
+    
+            & i {
+                margin: 0 1em;
+                color: gray;
+                transition: color $transition-duration;
+            }
+        }
+    
+        &:hover{
+            background-color: $primary-color-light;
+
+            & i{
+                color: $primary-color;
+            }
+        }
+    }
+
+}

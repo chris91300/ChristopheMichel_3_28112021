@@ -22,5 +22,14 @@ h1, h2, h3{
 section{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 1em;
+}
+
+
+strong{
+    font-weight: bold;
+}
+
+img{// a modifier
+    width: 200px;
 }
