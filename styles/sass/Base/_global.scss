@@ -30,6 +30,15 @@ strong{
     font-weight: bold;
 }
 
-img{// a modifier
-    width: 200px;
+
+
+
+.card{
+    box-shadow: 1px 5px 5px lightgrey;
+}
+
+
+a, a:visited{
+    text-decoration: none;
+    color: $black;
 }

@@ -12,8 +12,16 @@
 }
 
 
+section{
+    background-color: $light-grey;
+}
+
 section:first-of-type{
     text-align: center;
     padding: 3rem;
-    background-color: $light-grey;
+}
+
+
+section:nth-child(even){
+    background-color: white;
 }

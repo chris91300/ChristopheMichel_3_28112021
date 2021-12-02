@@ -32,8 +32,13 @@ strong {
   font-weight: bold;
 }
 
-img {
-  width: 200px;
+.card {
+  box-shadow: 1px 5px 5px lightgrey;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #333;
 }
 
 button {
@@ -65,7 +70,6 @@ button {
   align-items: center;
   background-color: #f4f2f2;
   border-radius: 30px;
-  box-shadow: 1px 5px 5px lightgrey;
   padding: 2em 0;
   margin: 10px 0;
   transition: background-color 0.3s;
@@ -105,6 +109,68 @@ button {
   color: #9356DC;
 }
 
+.restaurant {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.restaurant a {
+  width: 100%;
+  height: 100%;
+}
+.restaurant a img {
+  width: 100%;
+}
+.restaurant a .description {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.restaurant a .description div {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant a .description div p, .restaurant a .description div h3 {
+  margin: 2px;
+}
+.restaurant a .description > p {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.restaurant a .description .icons {
+  font-size: 1.5rem;
+  padding-right: 10px;
+  margin: 0;
+}
+.restaurant a .description .icons .fas {
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  display: none;
+  /* &:before{
+       display: inline;
+   }*/
+}
+.restaurant a .description .icons:hover .fas {
+  display: inline;
+}
+.restaurant a .description .icons:hover .far {
+  display: none;
+}
+.restaurant .etiquette {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #99E2D0;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  font-size: 0.7em;
+  color: #1b6150;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -124,8 +190,15 @@ header img {
   margin-right: 10px;
 }
 
+section {
+  background-color: #f4f2f2;
+}
+
 section:first-of-type {
   text-align: center;
   padding: 3rem;
-  background-color: #f4f2f2;
+}
+
+section:nth-child(even) {
+  background-color: white;
 }/*# sourceMappingURL=accueil.css.map */
