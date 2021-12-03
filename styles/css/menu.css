@@ -59,6 +59,52 @@ button {
   align-self: center;
 }
 
+.meal-item {
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.meal-item .meal-item-container {
+  flex: 1;
+  padding: 0.8rem 0.5rem;
+}
+.meal-item .meal-item-container .meal-item-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.meal-item .meal-item-container .meal-item-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.meal-item .meal-item-container .meal-item-description p {
+  margin: 0;
+}
+.meal-item .meal-item-container .meal-item-description p:first-child {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 20px;
+}
+.meal-item i {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0%;
+  background-color: #99E2D0;
+  color: white;
+  transition: all 0.3s;
+  /* transform: scaleX(0);
+   transform-origin: right;*/
+}
+.meal-item:hover i {
+  width: 15%;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -67,6 +113,20 @@ header {
 }
 header .fa-arrow-right {
   visibility: hidden;
+}
+
+.meal-section {
+  display: flex;
+  flex-direction: column;
+}
+.meal-section .meal-section-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.meal-section .underline {
+  height: 3px;
+  width: 50px;
+  background-color: #99E2D0;
 }
 
 footer {
