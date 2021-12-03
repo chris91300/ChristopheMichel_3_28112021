@@ -22,8 +22,8 @@ $grey : #eceaea;
 $black : #333;
 
 
-$primary-color_light : color.scale($primary-color,  $lightness: 90%);
-$tertiary-color_darken : darken($tertiary-color, 50%);
+$primary-color-light : color.scale($primary-color,  $lightness: 90%);
+$tertiary-color-darken : darken($tertiary-color, 35%);
 
 
 

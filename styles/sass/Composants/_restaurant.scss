@@ -16,6 +16,9 @@
 
         & img{
             width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: bottom;
         }
 
         & .description{
@@ -37,9 +40,9 @@
 
             }
 
-            & > p{
+            /*& > p{
                 background-clip: text;
-            }
+            }*/
 
             & .icons{
                 font-size: 1.5rem;
@@ -48,18 +51,17 @@
             
 
                 & .fas{
-                    background: linear-gradient(to top, $secondary-color, $primary-color);
                     display: none;
                     
 
-                   /* &:before{
-                        display: inline;
-                    }*/
                 }
 
                 &:hover{
                     & .fas{
                         display: inline;
+                        background: linear-gradient(to top, $secondary-color, $primary-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color : transparent;
                     }
 
                     & .far{
@@ -79,6 +81,6 @@
         font-weight: bold;
         padding: 0.5em 1em;
         font-size: 0.7em;
-        color: $tertiary-color_darken;
+        color: $tertiary-color-darken;
     }
 }
