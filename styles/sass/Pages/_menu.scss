@@ -2,8 +2,11 @@
 
 main{
 
+    background-color: $light-grey;
     & > img{
         width: 100%;
+        object-fit: cover;
+        max-height: 400px;
     }
 
 
@@ -13,6 +16,8 @@ main{
         position: relative;
         top: -60px;
         background-color: $light-grey;
+        max-width: 600px;
+        margin: auto;
 
         & > div:first-of-type{
             display: flex;
@@ -23,5 +28,10 @@ main{
                 font-size: 1.8rem;
             }
         }
+    }
+
+
+    button{
+        margin: 2rem;
     }
 }

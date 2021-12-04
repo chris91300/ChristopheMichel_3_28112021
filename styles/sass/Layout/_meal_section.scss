@@ -14,4 +14,14 @@
         width: 50px;
         background-color: $tertiary-color;
     }
+
+    .meal-list{
+        display: flex;
+        flex-direction: column;
+        .meal-item{
+            @include animation-showing($child);
+        }
+    }
+    
+    
 }

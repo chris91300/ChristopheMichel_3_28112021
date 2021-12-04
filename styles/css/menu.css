@@ -1,5 +1,17 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@-webkit-keyframes showing {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes showing {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 /*
     voir le problème des fonts
 */
@@ -57,6 +69,7 @@ button {
   background-image: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   align-self: center;
+  box-shadow: 0 2px 4px 0px #a2a0a0;
 }
 
 .meal-item {
@@ -65,6 +78,9 @@ button {
   background-color: white;
   overflow: hidden;
   margin: 10px 0;
+  position: relative;
+  top: 30px;
+  opacity: 0;
 }
 .meal-item .meal-item-container {
   flex: 1;
@@ -88,6 +104,7 @@ button {
   text-overflow: ellipsis;
   overflow: hidden;
   height: 20px;
+  /*white-space: nowrap;*/
 }
 .meal-item i {
   font-size: 1.5rem;
@@ -98,8 +115,6 @@ button {
   background-color: #99E2D0;
   color: white;
   transition: all 0.3s;
-  /* transform: scaleX(0);
-   transform-origin: right;*/
 }
 .meal-item:hover i {
   width: 15%;
@@ -107,9 +122,13 @@ button {
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding: 0 30px;
+}
+header i {
+  font-size: 1.3rem;
 }
 header .fa-arrow-right {
   visibility: hidden;
@@ -128,6 +147,26 @@ header .fa-arrow-right {
   width: 50px;
   background-color: #99E2D0;
 }
+.meal-section .meal-list {
+  display: flex;
+  flex-direction: column;
+}
+.meal-section .meal-list .meal-item:nth-child(1) {
+  -webkit-animation: showing 1.5s linear 0.5s forwards;
+          animation: showing 1.5s linear 0.5s forwards;
+}
+.meal-section .meal-list .meal-item:nth-child(2) {
+  -webkit-animation: showing 1.5s linear 0.8s forwards;
+          animation: showing 1.5s linear 0.8s forwards;
+}
+.meal-section .meal-list .meal-item:nth-child(3) {
+  -webkit-animation: showing 1.5s linear 1.1s forwards;
+          animation: showing 1.5s linear 1.1s forwards;
+}
+.meal-section .meal-list .meal-item:nth-child(4) {
+  -webkit-animation: showing 1.5s linear 1.4s forwards;
+          animation: showing 1.5s linear 1.4s forwards;
+}
 
 footer {
   padding: 1em;
@@ -139,7 +178,6 @@ footer ul {
 footer ul li {
   list-style: none;
   margin-bottom: 10px;
-  font-weight: bold;
   color: white;
   font-size: 0.8rem;
 }
@@ -160,8 +198,14 @@ footer ul li i {
   color: white;
 }
 
+main {
+  background-color: #f4f2f2;
+}
 main > img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
 }
 main section {
   border-top-left-radius: 40px;
@@ -169,6 +213,8 @@ main section {
   position: relative;
   top: -60px;
   background-color: #f4f2f2;
+  max-width: 600px;
+  margin: auto;
 }
 main section > div:first-of-type {
   display: flex;
@@ -177,4 +223,7 @@ main section > div:first-of-type {
 }
 main section > div:first-of-type i {
   font-size: 1.8rem;
+}
+main button {
+  margin: 2rem;
 }/*# sourceMappingURL=menu.css.map */

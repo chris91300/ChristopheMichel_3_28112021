@@ -1,11 +1,18 @@
 
 
+
 .meal-item{
     display: flex;
     border-radius: 20px;
     background-color: white;
     overflow: hidden;
     margin: 10px 0;
+    //animation
+    position: relative;
+    top: 30px;
+    opacity: 0;
+    //animation: showing 1.5s linear 0.5s forwards;
+   
 
     .meal-item-container{
         flex: 1;
@@ -30,6 +37,7 @@
                     text-overflow: ellipsis;
                     overflow: hidden;
                     height: 20px;
+                    /*white-space: nowrap;*/
                 }
             }
         }
@@ -44,16 +52,13 @@
         width: 0%;
         background-color: $tertiary-color;
         color: white;
-        transition: all 0.3s;
-       /* transform: scaleX(0);
-        transform-origin: right;*/
+        transition: all $transition-duration;
 
         
     }
 
 
     &:hover i{
-       // transform: scaleX(1);
        width: 15%;
     }
 

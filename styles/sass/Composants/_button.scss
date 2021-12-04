@@ -8,4 +8,5 @@ button{
     background-image: linear-gradient($secondary-color , $primary-color);
     cursor: pointer;
     align-self: center;
+    box-shadow: 0 2px 4px 0px $shadow-gray;
 }

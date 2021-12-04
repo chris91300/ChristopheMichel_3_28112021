@@ -20,6 +20,7 @@ $tertiary-color : #99E2D0;
 $light-grey : #f4f2f2;
 $grey : #eceaea;
 $black : #333;
+$shadow-gray : #a2a0a0;
 
 
 $primary-color-light : color.scale($primary-color,  $lightness: 90%);
@@ -27,6 +28,31 @@ $tertiary-color-darken : darken($tertiary-color, 35%);
 
 
 
-//  VARIABLES ANIMATION, TRASITION
+//  VARIABLES ANIMATION, TRANSITION
 
 $transition-duration : 0.3s;
+
+//  MIXIN animation
+
+@keyframes showing {
+    to {
+        top: 0;
+        opacity: 1;
+    }
+    
+}
+
+$child:(
+    1 : 0.5s,
+    2 : 0.8s,
+    3 : 1.1s,
+    4 : 1.4s
+);
+
+@mixin animation-showing($object){
+    @each $num, $delai in $object{
+        &:nth-child(#{$num}){
+            animation: showing 1.5s linear $delai forwards;
+        }
+    }
+}
