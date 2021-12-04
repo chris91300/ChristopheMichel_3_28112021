@@ -71,6 +71,10 @@ button {
   align-self: center;
   box-shadow: 0 2px 4px 0px #a2a0a0;
 }
+button:hover {
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 2px 4px 0px #3c3a3a;
+}
 
 .meal-item {
   display: flex;

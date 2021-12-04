@@ -1,4 +1,7 @@
 
+
+
+
 button{
     width: fit-content;
     padding: 10px 20px;
@@ -9,4 +12,10 @@ button{
     cursor: pointer;
     align-self: center;
     box-shadow: 0 2px 4px 0px $shadow-gray;
+
+
+    &:hover{
+        background-image: linear-gradient(lighten($secondary-color, 5% ), lighten($primary-color, 5%));
+        box-shadow: 0 2px 4px 0px darken($shadow-gray, 40%);
+    }
 }
