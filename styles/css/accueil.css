@@ -312,20 +312,37 @@ header {
 footer {
   padding: 1rem;
   background-color: #353434;
+  color: white;
+}
+footer h2 {
+  margin-bottom: 20px;
+  font-family: "Shrikhand", cursif, sans-cerif;
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 768px) {
+  footer h2 {
+    text-align: center;
+  }
 }
 footer ul {
   padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 footer ul li {
   list-style: none;
   margin-bottom: 10px;
   color: white;
   font-size: 0.8rem;
-}
-footer ul li:first-of-type {
-  margin-bottom: 20px;
-  font-family: "Shrikhand", cursif, sans-cerif;
-  font-size: 1.1rem;
+  /*&:first-of-type{                
+      margin-bottom: 20px;
+      font-family: $font-title;
+      font-size: 1.1rem;
+  }*/
 }
 footer ul li a {
   color: white;

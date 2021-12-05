@@ -2,9 +2,25 @@
 footer{
     padding: 1rem;
     background-color: rgb(53, 52, 52);
+    color: white;
+
+    h2{
+        margin-bottom: 20px;
+        font-family: $font-title;
+        font-size: 1.1rem;
+
+        @media screen and (min-width: map_get($breakpoints, tablette)) {
+            text-align: center;
+        }
+    }
 
     & ul{
         padding-left: 0;
+
+        @media screen and (min-width: map_get($breakpoints, tablette)) {
+            display: flex;
+            justify-content: space-around;
+        }
 
         & li{
             list-style: none;
@@ -12,11 +28,11 @@ footer{
             color: white;
             font-size: 0.8rem;
 
-            &:first-of-type{                
+            /*&:first-of-type{                
                 margin-bottom: 20px;
                 font-family: $font-title;
                 font-size: 1.1rem;
-            }
+            }*/
 
             & a{
                 color: white;
