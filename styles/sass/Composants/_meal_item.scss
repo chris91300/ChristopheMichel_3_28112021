@@ -7,11 +7,9 @@
     background-color: white;
     overflow: hidden;
     margin: 10px 0;
-    //animation
     position: relative;
     top: 30px;
     opacity: 0;
-    //animation: showing 1.5s linear 0.5s forwards;
    
 
     .meal-item-container{
@@ -28,6 +26,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
 
             p{
                 margin: 0;
@@ -61,5 +60,10 @@
     &:hover i{
        width: 15%;
     }
+
+    &:hover i:before{
+        animation: rotation $transition-duration 0s linear forwards;
+     }
+
 
 }

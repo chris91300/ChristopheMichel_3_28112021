@@ -122,13 +122,13 @@ button:not(.icons):hover {
   }
 }
 .step-container .step {
-  width: calc(100% - 0.5em);
+  width: calc(100% - 0.5rem);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #f4f2f2;
   border-radius: 30px;
-  padding: 2em 0;
+  padding: 2rem 0;
   margin: 10px 0;
   transition: background-color 0.3s;
 }
@@ -143,20 +143,20 @@ button:not(.icons):hover {
   align-items: center;
   margin: 0;
   position: relative;
-  left: -0.5em;
+  left: -0.5rem;
 }
 .step-container .step p span {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   color: white;
   background-color: #9356DC;
 }
 .step-container .step p i {
-  margin: 0 1em;
+  margin: 0 1rem;
   color: gray;
   transition: color 0.3s;
 }
@@ -285,7 +285,7 @@ header {
 }
 
 footer {
-  padding: 1em;
+  padding: 1rem;
   background-color: #353434;
 }
 footer ul {
