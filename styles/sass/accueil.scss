@@ -1,5 +1,7 @@
 
 @import './Utils/variables';
+@import './Utils/animations';
+@import './Utils/mixin';
 
 @import './Base/font';
 @import './Base/global';
@@ -7,6 +9,7 @@
 @import './Composants/button';
 @import './Composants/step';
 @import './Composants/restaurant';
+@import './Composants/loading';
 
 @import './Layout/header_accueil';
 @import './Layout/footer';

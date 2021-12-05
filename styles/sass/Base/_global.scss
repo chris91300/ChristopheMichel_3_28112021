@@ -3,14 +3,21 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     width: 100%;
     font-family: $font-text;
     color: $black;
+    min-height: 100%;
+    
 }
 
 main{
     width: 100%;
+    position: relative;
 }
 
 h1, h2, h3{

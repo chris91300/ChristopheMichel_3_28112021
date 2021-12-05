@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: column;
         .meal-item{
-            @include animation-showing($child);
+            @include animation-showing($meal-item-anim-delay);
         }
     }
     

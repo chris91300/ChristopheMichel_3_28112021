@@ -1,0 +1,30 @@
+
+
+//  LOADING-CONTAINER HIDDEN
+
+@keyframes hidden {
+    99% { z-index: 2; }
+    100% { z-index: -1; }    
+}
+
+//  LOADING
+
+@keyframes rotation {
+     to {transform: rotate(360deg);}
+ }
+
+
+
+
+
+
+//  APPARITION DES MEAL-ITEM
+@keyframes showing {
+    to {
+        top: 0;
+        opacity: 1;
+    }
+    
+}
+
+

@@ -1,0 +1,11 @@
+
+//  AJOUT LA PROPRIÉTÉ ANIMATION AU MEAL-ITEM
+//  le delay est différent entre chaques enfants,
+//il y a un décalage du départ de l'animation de 0.3s entre chaques
+@mixin animation-showing($object){
+    @each $num, $delai in $object{
+        &:nth-child(#{$num}){
+            animation: showing 1.5s linear $delai forwards;
+        }
+    }
+}
