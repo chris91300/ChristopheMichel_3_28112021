@@ -9,6 +9,18 @@
     margin-bottom: 20px;
     background-color: white;
 
+    @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
+        width: 45%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "desktop")) {
+        width: 30%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "desktop-wide")) {
+        width: 23%;
+    }
+
 
     & a{
         width: 100%;

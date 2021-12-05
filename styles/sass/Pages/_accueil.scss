@@ -25,3 +25,10 @@ section:first-of-type{
 section:nth-child(odd){
     background-color: white;
 }
+
+
+.restaurants-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

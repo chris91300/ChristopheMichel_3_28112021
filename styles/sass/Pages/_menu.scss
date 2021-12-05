@@ -3,6 +3,11 @@
 main{
 
     background-color: $light-grey;
+
+    @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
+        background-color: white;
+    }
+
     & > img{
         width: 100%;
         object-fit: cover;
@@ -16,8 +21,13 @@ main{
         position: relative;
         top: -60px;
         background-color: $light-grey;
-        max-width: 600px;
+        max-width: map-get($breakpoints, "mobile-landscape");
         margin: auto;
+
+        @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
 
         & > div:first-of-type{
             display: flex;

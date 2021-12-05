@@ -144,6 +144,21 @@ button:not(.icons):hover {
   margin-bottom: 20px;
   background-color: white;
 }
+@media screen and (min-width: 576px) {
+  .restaurant {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurant {
+    width: 23%;
+  }
+}
 .restaurant a {
   width: 100%;
   height: 100%;
@@ -260,4 +275,10 @@ section:first-of-type {
 
 section:nth-child(odd) {
   background-color: white;
+}
+
+.restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }/*# sourceMappingURL=accueil.css.map */
