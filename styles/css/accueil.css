@@ -1,19 +1,28 @@
 @charset "UTF-8";
+/*
+@keyframes hidden {
+    99% { z-index: 2; }
+    100% { z-index: -1; }    
+}*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @-webkit-keyframes hidden {
   99% {
-    z-index: 2;
+    position: relative;
+    left: 0px;
   }
   100% {
-    z-index: -1;
+    position: absolute;
+    left: -5000px;
   }
 }
 @keyframes hidden {
   99% {
-    z-index: 2;
+    position: relative;
+    left: 0px;
   }
   100% {
-    z-index: -1;
+    position: absolute;
+    left: -5000px;
   }
 }
 @-webkit-keyframes rotation {
@@ -38,6 +47,22 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes show {
+  99% {
+    position: absolute;
+  }
+  100% {
+    position: static;
+  }
+}
+@keyframes show {
+  99% {
+    position: absolute;
+  }
+  100% {
+    position: static;
+  }
+}
 /*
     voir le problème des fonts
 */
@@ -54,6 +79,8 @@ body {
   font-family: "Roboto", sans-serif;
   color: #333;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -251,15 +278,13 @@ button:not(.icons):hover {
 }
 
 .loading-container {
-  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex: 1;
   background-color: white;
-  padding-top: 200px;
   overflow: hidden;
   transform-origin: top;
   -webkit-animation: hidden 3s 0s forwards;
@@ -312,6 +337,13 @@ footer ul li i {
   margin-right: 5px;
   width: 20px;
   color: white;
+}
+
+main {
+  position: absolute;
+  left: -5000px;
+  -webkit-animation: show 3s 0s forwards;
+          animation: show 3s 0s forwards;
 }
 
 .position {

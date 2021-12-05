@@ -1,10 +1,15 @@
 
 
 //  LOADING-CONTAINER HIDDEN
-
+/*
 @keyframes hidden {
     99% { z-index: 2; }
     100% { z-index: -1; }    
+}*/
+
+@keyframes hidden {
+    99% { position: relative; left: 0px;}
+    100% { position: absolute; left: -5000px; }    
 }
 
 //  LOADING
@@ -28,3 +33,13 @@
 }
 
 
+//  APPARITION DU MAIN DE LA PAGE D'ACCUEIL UNE FOIS LE LOADING TERMINÉ
+@keyframes show {    
+    99%{
+        position: absolute;
+    } 
+    100% {
+        position: static;
+    }
+    
+}
