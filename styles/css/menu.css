@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/*
-@keyframes hidden {
-    99% { z-index: 2; }
-    100% { z-index: -1; }    
-}*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @-webkit-keyframes hidden {
   99% {
@@ -33,6 +28,50 @@
 @keyframes rotation {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes changeColorBorder {
+  0% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  33% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+  66% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  100% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+}
+@keyframes changeColorBorder {
+  0% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  33% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+  66% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  100% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
   }
 }
 @-webkit-keyframes showing {
@@ -129,10 +168,12 @@ button:not(.icons) {
   cursor: pointer;
   align-self: center;
   box-shadow: 0 2px 4px 0px #a2a0a0;
+  transition: box-shadow 0.5s;
 }
 button:not(.icons):hover {
   background-image: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 0 2px 4px 0px #3c3a3a;
+  box-shadow: 0 2px 4px 3px #3c3a3a;
+  font-weight: bold;
 }
 
 .meal-item {

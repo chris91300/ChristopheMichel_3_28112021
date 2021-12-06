@@ -1,11 +1,7 @@
 
 
 //  LOADING-CONTAINER HIDDEN
-/*
-@keyframes hidden {
-    99% { z-index: 2; }
-    100% { z-index: -1; }    
-}*/
+
 
 @keyframes hidden {
     99% { position: relative; left: 0px;}
@@ -18,7 +14,31 @@
      to {transform: rotate(360deg);}
  }
 
+ // CHANGEMENT DE LA COULEUR DE LA BORDURE DU LOADING
+@keyframes changeColorBorder {
+    0%{
+        border-right-color: $secondary-color;
+        border-bottom-color: $secondary-color;
+        border-left-color: $secondary-color;
+    }
 
+    33%{
+        border-right-color: $primary-color;
+        border-bottom-color: $primary-color;
+        border-left-color: $primary-color;
+    }
+    66%{
+        border-right-color: $secondary-color;
+        border-bottom-color: $secondary-color;
+        border-left-color: $secondary-color;
+    }
+
+    100%{
+        border-right-color: $primary-color;
+        border-bottom-color: $primary-color;
+        border-left-color: $primary-color;
+    }
+}
 
 
 

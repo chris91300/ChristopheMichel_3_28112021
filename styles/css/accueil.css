@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/*
-@keyframes hidden {
-    99% { z-index: 2; }
-    100% { z-index: -1; }    
-}*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @-webkit-keyframes hidden {
   99% {
@@ -33,6 +28,50 @@
 @keyframes rotation {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes changeColorBorder {
+  0% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  33% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+  66% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  100% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+}
+@keyframes changeColorBorder {
+  0% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  33% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
+  }
+  66% {
+    border-right-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+    border-left-color: #FF79DA;
+  }
+  100% {
+    border-right-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #9356DC;
   }
 }
 @-webkit-keyframes showing {
@@ -129,10 +168,12 @@ button:not(.icons) {
   cursor: pointer;
   align-self: center;
   box-shadow: 0 2px 4px 0px #a2a0a0;
+  transition: box-shadow 0.5s;
 }
 button:not(.icons):hover {
   background-image: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 0 2px 4px 0px #3c3a3a;
+  box-shadow: 0 2px 4px 3px #3c3a3a;
+  font-weight: bold;
 }
 
 .step-container {
@@ -281,6 +322,7 @@ button:not(.icons):hover {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -290,17 +332,21 @@ button:not(.icons):hover {
   -webkit-animation: hidden 3s 0s forwards;
           animation: hidden 3s 0s forwards;
 }
+.loading-container p {
+  font-size: 2rem;
+  color: #9356DC;
+}
 .loading-container .loading {
-  width: 3rem;
-  height: 3rem;
-  border: 3px solid;
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid;
   border-top-color: transparent;
-  border-right-color: #9356DC;
-  border-bottom-color: #9356DC;
-  border-left-color: #9356DC;
+  border-right-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  border-left-color: #FF79DA;
   border-radius: 50%;
-  -webkit-animation: rotation 1s 0s linear 4;
-          animation: rotation 1s 0s linear 4;
+  -webkit-animation: rotation 1s 0s linear 4, changeColorBorder 3s 0s linear;
+          animation: rotation 1s 0s linear 4, changeColorBorder 3s 0s linear;
 }
 
 header {
@@ -382,7 +428,7 @@ section:first-of-type {
   padding: 3rem;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
   background-color: white;
 }
 

@@ -12,10 +12,12 @@ button:not(.icons){
     cursor: pointer;
     align-self: center;
     box-shadow: 0 2px 4px 0px $shadow-gray;
+    transition: box-shadow 0.5s;
 
 
     &:hover{
         background-image: linear-gradient(lighten($secondary-color, 5% ), lighten($primary-color, 5%));
-        box-shadow: 0 2px 4px 0px darken($shadow-gray, 40%);
+        box-shadow: 0 2px 4px 3px darken($shadow-gray, 40%);
+        font-weight: bold;
     }
 }
