@@ -102,6 +102,16 @@
     position: static;
   }
 }
+@-webkit-keyframes showUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes showUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
 /*
     voir le problème des fonts
 */

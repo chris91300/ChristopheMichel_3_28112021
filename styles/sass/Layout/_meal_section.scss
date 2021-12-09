@@ -5,38 +5,46 @@
 
     @media screen and (min-width: map-get($breakpoints, "desktop")) {
         flex-direction: row;
-        align-items: center;
-    }
-}
-
-
-
-.meal-section{
-    display: flex;
-    flex-direction: column;
-
-    .meal-section-title{
-        font-size: 1.2rem;
-        margin-bottom: 5px;
+        justify-content: space-between;
     }
 
-    .underline{
-        height: 3px;
-        width: 50px;
-        background-color: $tertiary-color;
-    }
 
-    
-
-    .meal-list{
+    .meal-section{
         display: flex;
         flex-direction: column;
-        .meal-item{
-            @include animation-showing($meal-item-anim-delay);
+        @media screen and (min-width: map-get($breakpoints, "desktop")) {
+            width: 30%;
         }
-
+    
+        .meal-section-title{
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+    
+        .underline{
+            height: 3px;
+            width: 50px;
+            background-color: $tertiary-color;
+            transform-origin: left;
+            transform: scaleX(0);
+            animation: showUnderline 3s 0s ease-in-out forwards;
+        }
+    
+        
+    
+        .meal-list{
+            display: flex;
+            flex-direction: column;
+            .meal-item{
+                @include animation-showing($meal-item-anim-delay);
+            }
+    
+            
+        }
+        
         
     }
-    
-    
 }
+
+
+

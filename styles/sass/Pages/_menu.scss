@@ -21,7 +21,7 @@ main{
         position: relative;
         top: -60px;
         background-color: $light-grey;
-        max-width: map-get($breakpoints, "mobile-landscape");
+       // max-width: map-get($breakpoints, "mobile-landscape");
         margin: auto;
 
         @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
