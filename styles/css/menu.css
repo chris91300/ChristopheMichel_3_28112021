@@ -186,9 +186,15 @@ button:not(.icons):hover {
   top: 30px;
   opacity: 0;
 }
+@media screen and (min-width: 992px) {
+  .meal-item {
+    width: 100%;
+  }
+}
 .meal-item .meal-item-container {
   flex: 1;
   padding: 0.8rem 0.5rem;
+  overflow: hidden;
 }
 .meal-item .meal-item-container .meal-item-title {
   font-size: 1.2rem;
@@ -209,7 +215,7 @@ button:not(.icons):hover {
   text-overflow: ellipsis;
   overflow: hidden;
   height: 20px;
-  /*white-space: nowrap;*/
+  white-space: nowrap;
 }
 .meal-item i {
   font-size: 1.5rem;
@@ -241,6 +247,17 @@ header i {
 }
 header .fa-arrow-right {
   visibility: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .meal-section {

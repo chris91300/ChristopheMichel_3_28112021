@@ -10,11 +10,16 @@
     position: relative;
     top: 30px;
     opacity: 0;
+
+    @media screen and (min-width : map-get($breakpoints, desktop)) {
+        width: 100%;
+    }
    
 
     .meal-item-container{
         flex: 1;
         padding: 0.8rem 0.5rem;
+        overflow: hidden;
 
         .meal-item-title{
             font-size: 1.2rem;
@@ -36,7 +41,7 @@
                     text-overflow: ellipsis;
                     overflow: hidden;
                     height: 20px;
-                    /*white-space: nowrap;*/
+                    white-space: nowrap;
                 }
             }
         }

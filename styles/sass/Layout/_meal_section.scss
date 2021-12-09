@@ -1,4 +1,15 @@
 
+.menu{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: map-get($breakpoints, "desktop")) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
 
 .meal-section{
     display: flex;
@@ -15,12 +26,16 @@
         background-color: $tertiary-color;
     }
 
+    
+
     .meal-list{
         display: flex;
         flex-direction: column;
         .meal-item{
             @include animation-showing($meal-item-anim-delay);
         }
+
+        
     }
     
     
