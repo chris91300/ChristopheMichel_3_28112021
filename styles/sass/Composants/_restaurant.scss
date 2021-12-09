@@ -67,12 +67,14 @@
             
 
                 & .fas{
-                    display: none;
-                    
+                    display: none;         
 
                 }
 
                 &:hover{
+
+                    animation: showHeartGradually 1s 0s forwards;
+
                     & .fas{
                         display: inline;
                         background: linear-gradient(to top, $secondary-color, $primary-color);

@@ -112,6 +112,22 @@
     transform: scaleX(1);
   }
 }
+@-webkit-keyframes showHeartGradually {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showHeartGradually {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*
     voir le problème des fonts
 */
@@ -307,6 +323,10 @@ button:not(.icons):hover {
 }
 .restaurant a .description .icons .fas {
   display: none;
+}
+.restaurant a .description .icons:hover {
+  -webkit-animation: showHeartGradually 1s 0s forwards;
+          animation: showHeartGradually 1s 0s forwards;
 }
 .restaurant a .description .icons:hover .fas {
   display: inline;

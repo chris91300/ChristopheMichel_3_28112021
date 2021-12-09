@@ -112,6 +112,22 @@
     transform: scaleX(1);
   }
 }
+@-webkit-keyframes showHeartGradually {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showHeartGradually {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*
     voir le problème des fonts
 */

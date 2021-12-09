@@ -65,8 +65,17 @@
 }
 
 
-// showUnderline
+// élargissement de la barre sous REPAS PLAT DESSERT
 
 @keyframes showUnderline {
     to {transform: scaleX(1);}
 }
+
+
+// appartition progressive du couleur remplie pour les cards restaurants
+@keyframes showHeartGradually {
+    from{ opacity: 0;}
+    to { opacity: 1;}
+    
+}
+
