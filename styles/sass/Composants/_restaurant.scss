@@ -75,37 +75,12 @@
         color: $tertiary-color-darken;
     }
 
-    .icons{
+   .heart{
         font-size: 1.5rem;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        margin-right: 10px;
         position: absolute;
         bottom: 30px;
         right: 10px;
     
-
-        .fas{
-            display: none;         
-
-        }
-
-        &:hover{
-            transform-origin: bottom;
-            animation: showHeartGradually 1s 0s forwards;
-
-            .fas{
-                display: inline;
-                background: linear-gradient(to top, $secondary-color, $primary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color : transparent;
-                //animation: showHeartGradually 1s 0s forwards;
-            }
-
-            .far{
-                display: none;
-            }
-        }
-    }
+       @include heart;
+   }
 }

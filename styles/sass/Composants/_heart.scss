@@ -1,25 +1,15 @@
 
-//  AJOUT LA PROPRIÉTÉ ANIMATION AU MEAL-ITEM
-//  le delay est différent entre chaques enfants,
-//il y a un décalage du départ de l'animation de 0.3s entre chaques
-@mixin animation-showing($object){
-    @each $num, $delai in $object{
-        &:nth-child(#{$num}){
-            animation: showing 1.5s linear $delai forwards;
-        }
-    }
-}
 
 
-
-@mixin heart {
+ .heart{
+    font-size: 1.5rem;
     background-color: transparent;
     border: none;
     padding: 0;
-   /* margin-right: 10px;
+    margin-right: 10px;
     position: absolute;
     bottom: 30px;
-    right: 10px;*/
+    right: 10px;
     
 
 
@@ -55,5 +45,4 @@
             opacity: 0;
         }
     }
-
 }

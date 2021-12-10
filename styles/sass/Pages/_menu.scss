@@ -34,14 +34,16 @@ main{
             align-items: center;
             justify-content: space-between;
 
-            i {
-                font-size: 1.8rem;
+            .heart {
+                font-size: 2rem;
+                position: relative;
+                @include heart;
             }
         }
     }
 
 
-    button{
+    button:not(.heart){
         margin: 2rem;
     }
 }

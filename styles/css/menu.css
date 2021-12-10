@@ -206,7 +206,7 @@ a, a:visited {
   font-weight: bold;
 }
 
-button:not(.icons) {
+button:not(.heart) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -222,7 +222,7 @@ button:not(.icons) {
   position: relative;
   z-index: 1;
 }
-button:not(.icons)::after {
+button:not(.heart)::after {
   content: "";
   position: absolute;
   top: 0;
@@ -235,10 +235,10 @@ button:not(.icons)::after {
   transition: opacity 0.5s;
   z-index: -1;
 }
-button:not(.icons):hover {
+button:not(.heart):hover {
   box-shadow: 0 2px 4px 3px #3c3a3a;
 }
-button:not(.icons):hover::after {
+button:not(.heart):hover::after {
   opacity: 1;
 }
 
@@ -446,9 +446,43 @@ main section > div:first-of-type {
   align-items: center;
   justify-content: space-between;
 }
-main section > div:first-of-type i {
-  font-size: 1.8rem;
+main section > div:first-of-type .heart {
+  font-size: 2rem;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  /* margin-right: 10px;
+   position: absolute;
+   bottom: 30px;
+   right: 10px;*/
 }
-main button {
+main section > div:first-of-type .heart .fas {
+  display: flex;
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+main section > div:first-of-type .heart .far {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+main section > div:first-of-type .heart:hover {
+  transform-origin: bottom;
+  -webkit-animation: showHeartGradually 1s 0s forwards;
+          animation: showHeartGradually 1s 0s forwards;
+}
+main section > div:first-of-type .heart:hover .fas {
+  display: flex;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+main section > div:first-of-type .heart:hover .far {
+  opacity: 0;
+}
+main button:not(.heart) {
   margin: 2rem;
 }/*# sourceMappingURL=menu.css.map */
