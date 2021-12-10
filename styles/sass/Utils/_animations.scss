@@ -81,3 +81,10 @@
     
 }
 
+
+//  ROTATION DE L'ICONE LORS DE L'APPARITION DE LA COCHE DNAS LES MEAL-ITEM
+@keyframes rotationCoche {
+    0% {transform: translateX(100%);}
+    100% {transform: rotate(360deg) translateX(0);}
+}
+

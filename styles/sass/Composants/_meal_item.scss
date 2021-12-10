@@ -56,7 +56,12 @@
         width: 0%;
         background-color: $tertiary-color;
         color: white;
-        transition: all $transition-duration;
+        transition: all $transition-duration-coche;
+
+        &:before{
+            transform: translateX(100%) rotate(-1turn);
+            transition: transform $transition-duration-coche;
+        }
 
         
     }
@@ -64,11 +69,12 @@
 
     &:hover i{
        width: 15%;
-    }
 
-    &:hover i:before{
-        animation: rotation $transition-duration 0s linear forwards;
-     }
+       &:before{
+        transform: translateX(0%) rotate(0);
+       // animation: rotationCoche 1s 0s linear forwards;
+       }
+    }
 
 
 }
