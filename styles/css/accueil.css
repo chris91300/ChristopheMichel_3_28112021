@@ -22,12 +22,12 @@
 }
 @-webkit-keyframes rotation {
   to {
-    transform: rotate(360deg);
+    transform: rotate(4turn);
   }
 }
 @keyframes rotation {
   to {
-    transform: rotate(360deg);
+    transform: rotate(4turn);
   }
 }
 @-webkit-keyframes changeColorBorder {
@@ -119,6 +119,8 @@
   to {
     opacity: 1;
   }
+  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
+  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
 }
 @keyframes showHeartGradually {
   from {
@@ -127,6 +129,8 @@
   to {
     opacity: 1;
   }
+  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
+  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
 }
 /*
     voir le problème des fonts
@@ -269,6 +273,7 @@ button:not(.icons):hover {
   display: flex;
   margin-bottom: 20px;
   background-color: white;
+  position: relative;
 }
 @media screen and (min-width: 576px) {
   .restaurant {
@@ -314,29 +319,6 @@ button:not(.icons):hover {
 .restaurant a .description div p, .restaurant a .description div h3 {
   margin: 2px;
 }
-.restaurant a .description .icons {
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin-right: 10px;
-}
-.restaurant a .description .icons .fas {
-  display: none;
-}
-.restaurant a .description .icons:hover {
-  -webkit-animation: showHeartGradually 1s 0s forwards;
-          animation: showHeartGradually 1s 0s forwards;
-}
-.restaurant a .description .icons:hover .fas {
-  display: inline;
-  background: linear-gradient(to top, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurant a .description .icons:hover .far {
-  display: none;
-}
 .restaurant .etiquette {
   position: absolute;
   right: 10px;
@@ -346,6 +328,33 @@ button:not(.icons):hover {
   padding: 0.5em 1em;
   font-size: 0.7em;
   color: #2c9c81;
+}
+.restaurant .icons {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+}
+.restaurant .icons .fas {
+  display: none;
+}
+.restaurant .icons:hover {
+  transform-origin: bottom;
+  -webkit-animation: showHeartGradually 1s 0s forwards;
+          animation: showHeartGradually 1s 0s forwards;
+}
+.restaurant .icons:hover .fas {
+  display: inline;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant .icons:hover .far {
+  display: none;
 }
 
 .loading-container {
@@ -359,8 +368,8 @@ button:not(.icons):hover {
   background-color: white;
   overflow: hidden;
   transform-origin: top;
-  -webkit-animation: hidden 3s 0s forwards;
-          animation: hidden 3s 0s forwards;
+  -webkit-animation: hidden 2s 0s forwards;
+          animation: hidden 2s 0s forwards;
 }
 .loading-container p {
   font-size: 2rem;
@@ -375,8 +384,8 @@ button:not(.icons):hover {
   border-bottom-color: #FF79DA;
   border-left-color: #FF79DA;
   border-radius: 50%;
-  -webkit-animation: rotation 1s 0s linear 4, changeColorBorder 3s 0s linear;
-          animation: rotation 1s 0s linear 4, changeColorBorder 3s 0s linear;
+  -webkit-animation: rotation 4s 0s linear, changeColorBorder 3s 0s linear;
+          animation: rotation 4s 0s linear, changeColorBorder 3s 0s linear;
 }
 
 header {
@@ -414,11 +423,6 @@ footer ul li {
   margin-bottom: 10px;
   color: white;
   font-size: 0.8rem;
-  /*&:first-of-type{                
-      margin-bottom: 20px;
-      font-family: $font-title;
-      font-size: 1.1rem;
-  }*/
 }
 footer ul li a {
   color: white;
@@ -435,8 +439,8 @@ footer ul li i {
 main {
   position: absolute;
   left: -5000px;
-  -webkit-animation: show 3s 0s forwards;
-          animation: show 3s 0s forwards;
+  -webkit-animation: show 2s 0s forwards;
+          animation: show 2s 0s forwards;
 }
 
 .position {

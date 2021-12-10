@@ -22,12 +22,12 @@
 }
 @-webkit-keyframes rotation {
   to {
-    transform: rotate(360deg);
+    transform: rotate(4turn);
   }
 }
 @keyframes rotation {
   to {
-    transform: rotate(360deg);
+    transform: rotate(4turn);
   }
 }
 @-webkit-keyframes changeColorBorder {
@@ -119,6 +119,8 @@
   to {
     opacity: 1;
   }
+  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
+  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
 }
 @keyframes showHeartGradually {
   from {
@@ -127,6 +129,8 @@
   to {
     opacity: 1;
   }
+  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
+  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
 }
 /*
     voir le problème des fonts
@@ -357,11 +361,6 @@ footer ul li {
   margin-bottom: 10px;
   color: white;
   font-size: 0.8rem;
-  /*&:first-of-type{                
-      margin-bottom: 20px;
-      font-family: $font-title;
-      font-size: 1.1rem;
-  }*/
 }
 footer ul li a {
   color: white;

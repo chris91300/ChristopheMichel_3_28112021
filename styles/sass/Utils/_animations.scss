@@ -11,7 +11,7 @@
 //  LOADING
 
 @keyframes rotation {
-     to {transform: rotate(360deg);}
+     to {transform: rotate(4turn);}
  }
 
  // CHANGEMENT DE LA COULEUR DE LA BORDURE DU LOADING
@@ -76,6 +76,8 @@
 @keyframes showHeartGradually {
     from{ opacity: 0;}
     to { opacity: 1;}
+   /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
+   to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
     
 }
 

@@ -32,7 +32,7 @@
             width: 40%;
         }
     
-        & p{
+        p{
     
             display: flex;
             justify-content: flex-start;
@@ -41,7 +41,7 @@
             position: relative;
             left: -0.5rem;
     
-            & span{
+            span{
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -52,7 +52,7 @@
                 background-color: $primary-color;
             }
     
-            & i {
+            i {
                 margin: 0 1rem;
                 color: gray;
                 transition: color $transition-duration;
@@ -62,7 +62,7 @@
         &:hover{
             background-color: $primary-color-light;
 
-            & i{
+            i{
                 color: $primary-color;
             }
         }

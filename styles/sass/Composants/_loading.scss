@@ -13,7 +13,7 @@
     background-color: white;
     overflow: hidden;
     transform-origin: top;
-    animation: hidden 3s 0s forwards;
+    animation: hidden $loading-duration 0s forwards;
 
     p{
         font-size: 2rem;
@@ -30,6 +30,6 @@
         border-left-color: $secondary-color;
         border-radius: 50%;
 
-        animation: rotation 1s 0s linear 4, changeColorBorder 3s 0s linear;
+        animation: rotation 4s 0s linear , changeColorBorder 3s 0s linear;
     }
 }

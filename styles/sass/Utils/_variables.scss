@@ -30,6 +30,11 @@ $tertiary-color-darken : darken($tertiary-color, 35%);
 
 $transition-duration : 0.3s;
 
+// DURÉE DE L'ANIMATION DU LOADING
+$loading-duration : 2s;
+
+
+
 //  map des différents animation-delay des meal-item
 $meal-item-anim-delay:(
     1 : 0.5s,

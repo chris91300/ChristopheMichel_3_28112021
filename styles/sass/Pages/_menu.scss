@@ -8,7 +8,7 @@ main{
         background-color: white;
     }
 
-    & > img{
+    > img{
         width: 100%;
         object-fit: cover;
         max-height: 400px;
@@ -29,12 +29,12 @@ main{
             border-bottom-right-radius: 40px;
         }
 
-        & > div:first-of-type{
+        > div:first-of-type{
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            & i {
+            i {
                 font-size: 1.8rem;
             }
         }
