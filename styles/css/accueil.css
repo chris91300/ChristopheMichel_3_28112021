@@ -219,11 +219,27 @@ button:not(.icons) {
   align-self: center;
   box-shadow: 0 2px 4px 0px #a2a0a0;
   transition: box-shadow 0.5s;
+  position: relative;
+  z-index: 1;
+}
+button:not(.icons)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background-image: linear-gradient(#fface8, #ae80e5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
 }
 button:not(.icons):hover {
-  background-image: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 2px 4px 3px #3c3a3a;
-  font-weight: bold;
+}
+button:not(.icons):hover::after {
+  opacity: 1;
 }
 
 .step-container {
