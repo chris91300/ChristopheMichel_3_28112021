@@ -46,7 +46,8 @@
 //  APPARITION DES MEAL-ITEM
 @keyframes showing {
     to {
-        top: 0;
+        //top: 0;
+        transform: translateY(0);
         opacity: 1;
     }
     

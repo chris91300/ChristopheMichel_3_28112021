@@ -76,13 +76,13 @@
 }
 @-webkit-keyframes showing {
   to {
-    top: 0;
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes showing {
   to {
-    top: 0;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -173,12 +173,12 @@ main {
   position: relative;
 }
 
-h1, h2, h3 {
+h1, h2:not(.roboto), h3 {
   font-family: "Shrikhand", cursif, sans-cerif;
   font-weight: lighter;
 }
 
-h2 {
+h2:not(.roboto) {
   font-size: 2rem;
 }
 
@@ -373,26 +373,25 @@ button:not(.heart):hover::after {
   background-color: transparent;
   border: none;
   padding: 0;
-  /* margin-right: 10px;
-   position: absolute;
-   bottom: 30px;
-   right: 10px;*/
 }
 .restaurant .heart .fas {
   display: flex;
   position: absolute;
-  top: 0%;
+  top: 4%;
   opacity: 0;
   transition: all 0.5s;
 }
 .restaurant .heart .far {
   opacity: 1;
-  transition: opacity 0.5s;
 }
 .restaurant .heart:hover {
   transform-origin: bottom;
   -webkit-animation: showHeartGradually 1s 0s forwards;
           animation: showHeartGradually 1s 0s forwards;
+  /*.far{
+      //display: none;
+      //opacity: 0;
+  }*/
 }
 .restaurant .heart:hover .fas {
   display: flex;
@@ -400,9 +399,6 @@ button:not(.heart):hover::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
-}
-.restaurant .heart:hover .far {
-  opacity: 0;
 }
 
 .loading-container {

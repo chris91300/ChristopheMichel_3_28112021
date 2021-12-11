@@ -22,12 +22,12 @@ main{
     position: relative;
 }
 
-h1, h2, h3{
+h1, h2:not(.roboto), h3{
     font-family: $font-title;
     font-weight: lighter;
 }
 
-h2{
+h2:not(.roboto){
     font-size: 2rem;
 }
 
