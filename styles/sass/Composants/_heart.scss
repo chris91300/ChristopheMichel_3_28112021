@@ -1,35 +1,38 @@
-
-
-
- .heart{
-    font-size: 1.5rem;
+.heart{
     background-color: transparent;
     border: none;
     padding: 0;
-    margin-right: 10px;
-    position: absolute;
-    bottom: 30px;
-    right: 10px;
+
+    &--small{
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+    }
+
+    &--big{
+        font-size: 2rem;
+        position: relative;
+        
+    }
+
     
 
-
-    .fas{
+    .fas{// FULL HEART
         display: flex;
         position: absolute;
-        top: 0%;
+        top: 4%;
         opacity: 0;
-        transition: all 0.5s; 
+        transition: all $transition-duration-long; 
 
     }
 
-    .far{
+    .far{// EMPTY HEART
         opacity: 1;
-        transition: opacity 0.5s;
     }
 
     &:hover{
         transform-origin: bottom;
-        animation: showHeartGradually 1s 0s forwards;
 
         .fas{
             display: flex;
@@ -37,12 +40,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color : transparent;
             opacity: 1;
-            //animation: showHeartGradually 1s 0s forwards;
-        }
-
-        .far{
-            //display: none;
-            opacity: 0;
         }
     }
+
+    
 }

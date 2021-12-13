@@ -28,8 +28,8 @@ $tertiary-color-darken : darken($tertiary-color, 35%);
 
 //  ANIMATION, TRANSITION
 
-$transition-duration : 0.3s;
-$transition-duration-coche : 0.5s;
+$transition-duration-short : 0.3s;
+$transition-duration-long : 0.5s;
 
 // DURÉE DE L'ANIMATION DU LOADING
 $loading-duration : 2s;

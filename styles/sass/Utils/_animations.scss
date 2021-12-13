@@ -1,7 +1,7 @@
 
 
 //  LOADING-CONTAINER HIDDEN
-
+// masque le loading
 
 @keyframes hidden {
     99% { position: relative; left: 0px;}
@@ -9,12 +9,13 @@
 }
 
 //  LOADING
-
+// rotation de la div qui montre le chargement en cours
 @keyframes rotation {
      to {transform: rotate(4turn);}
  }
 
  // CHANGEMENT DE LA COULEUR DE LA BORDURE DU LOADING
+
 @keyframes changeColorBorder {
     0%{
         border-right-color: $secondary-color;
@@ -42,18 +43,6 @@
 
 
 
-
-//  APPARITION DES MEAL-ITEM
-@keyframes showing {
-    to {
-        //top: 0;
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-}
-
-
 //  APPARITION DU MAIN DE LA PAGE D'ACCUEIL UNE FOIS LE LOADING TERMINÉ
 @keyframes show {    
     99%{
@@ -66,26 +55,32 @@
 }
 
 
-// élargissement de la barre sous REPAS PLAT DESSERT
+
+
+//  APPARITION DES MEAL-ITEM
+@keyframes showing {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+// élargissement de la barre sous REPAS PLAT DESSERT dans la page des menus
 
 @keyframes showUnderline {
     to {transform: scaleX(1);}
 }
 
 
-// appartition progressive du couleur remplie pour les cards restaurants
-@keyframes showHeartGradually {
-    from{ opacity: 0;}
-    to { opacity: 1;}
-   /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
-   to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
-    
-}
-
-
+/*
 //  ROTATION DE L'ICONE LORS DE L'APPARITION DE LA COCHE DNAS LES MEAL-ITEM
 @keyframes rotationCoche {
     0% {transform: translateX(100%);}
     100% {transform: rotate(360deg) translateX(0);}
-}
+}*/
 

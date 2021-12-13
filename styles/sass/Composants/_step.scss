@@ -26,13 +26,13 @@
         border-radius: 30px;        
         padding: 2rem 0;
         margin: 10px 0;
-        transition: background-color $transition-duration;
+        transition: background-color $transition-duration-short;
 
         @media screen and (min-width : map.get($breakpoints, tablette)){
             width: 40%;
         }
     
-        p{
+        &-content{
     
             display: flex;
             justify-content: flex-start;
@@ -55,7 +55,7 @@
             i {
                 margin: 0 1rem;
                 color: gray;
-                transition: color $transition-duration;
+                transition: color $transition-duration-short;
             }
         }
     

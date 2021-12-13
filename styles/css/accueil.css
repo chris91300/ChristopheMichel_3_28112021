@@ -74,18 +74,6 @@
     border-left-color: #9356DC;
   }
 }
-@-webkit-keyframes showing {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes showing {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes show {
   99% {
     position: absolute;
@@ -102,6 +90,18 @@
     position: static;
   }
 }
+@-webkit-keyframes showing {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showing {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes showUnderline {
   to {
     transform: scaleX(1);
@@ -112,42 +112,12 @@
     transform: scaleX(1);
   }
 }
-@-webkit-keyframes showHeartGradually {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
-  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
-}
-@keyframes showHeartGradually {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
-  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
-}
-@-webkit-keyframes rotationCoche {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: rotate(360deg) translateX(0);
-  }
-}
+/*
+//  ROTATION DE L'ICONE LORS DE L'APPARITION DE LA COCHE DNAS LES MEAL-ITEM
 @keyframes rotationCoche {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: rotate(360deg) translateX(0);
-  }
-}
+    0% {transform: translateX(100%);}
+    100% {transform: rotate(360deg) translateX(0);}
+}*/
 /*
     voir le problème des fonts
 */
@@ -221,6 +191,7 @@ button:not(.heart) {
   transition: box-shadow 0.5s;
   position: relative;
   z-index: 1;
+  margin: 2rem;
 }
 button:not(.heart)::after {
   content: "";
@@ -239,6 +210,42 @@ button:not(.heart):hover {
   box-shadow: 0 2px 4px 3px #3c3a3a;
 }
 button:not(.heart):hover::after {
+  opacity: 1;
+}
+
+.heart {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.heart--small {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+}
+.heart--big {
+  font-size: 2rem;
+  position: relative;
+}
+.heart .fas {
+  display: flex;
+  position: absolute;
+  top: 4%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.heart .far {
+  opacity: 1;
+}
+.heart:hover {
+  transform-origin: bottom;
+}
+.heart:hover .fas {
+  display: flex;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 1;
 }
 
@@ -271,7 +278,7 @@ button:not(.heart):hover::after {
     width: 40%;
   }
 }
-.step-container .step p {
+.step-container .step-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -279,7 +286,7 @@ button:not(.heart):hover::after {
   position: relative;
   left: -0.5rem;
 }
-.step-container .step p span {
+.step-container .step-content span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,7 +296,7 @@ button:not(.heart):hover::after {
   color: white;
   background-color: #9356DC;
 }
-.step-container .step p i {
+.step-container .step-content i {
   margin: 0 1rem;
   color: gray;
   transition: color 0.3s;
@@ -338,24 +345,24 @@ button:not(.heart):hover::after {
   -o-object-position: bottom;
      object-position: bottom;
 }
-.restaurant a .description {
+.restaurant-description {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   padding: 15px 10px;
 }
-.restaurant a .description div {
+.restaurant-description-title {
+  font-weight: bold;
+}
+.restaurant-description div {
   display: flex;
   flex-direction: column;
 }
-.restaurant a .description div .description-title {
-  font-weight: bold;
-}
-.restaurant a .description div p, .restaurant a .description div h3 {
+.restaurant-description div p {
   margin: 2px;
 }
-.restaurant .etiquette {
+.restaurant--new {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -365,43 +372,8 @@ button:not(.heart):hover::after {
   font-size: 0.7em;
   color: #2c9c81;
 }
-.restaurant .heart {
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-.restaurant .heart .fas {
-  display: flex;
-  position: absolute;
-  top: 4%;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.restaurant .heart .far {
-  opacity: 1;
-}
-.restaurant .heart:hover {
-  transform-origin: bottom;
-  -webkit-animation: showHeartGradually 1s 0s forwards;
-          animation: showHeartGradually 1s 0s forwards;
-  /*.far{
-      //display: none;
-      //opacity: 0;
-  }*/
-}
-.restaurant .heart:hover .fas {
-  display: flex;
-  background: linear-gradient(to top, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-}
 
-.loading-container {
+.loading {
   width: 100%;
   height: 100%;
   display: flex;
@@ -415,11 +387,11 @@ button:not(.heart):hover::after {
   -webkit-animation: hidden 2s 0s forwards;
           animation: hidden 2s 0s forwards;
 }
-.loading-container p {
+.loading p {
   font-size: 2rem;
   color: #9356DC;
 }
-.loading-container .loading {
+.loading-rotate {
   width: 5rem;
   height: 5rem;
   border: 5px solid;

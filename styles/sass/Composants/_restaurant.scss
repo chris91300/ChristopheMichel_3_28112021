@@ -35,36 +35,38 @@
             object-position: bottom;
         }
 
-        .description{
+        
+    }
+
+    &-description{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px 10px;
+
+        &-title{
+            font-weight: bold;
+        }
+
+        div{
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 15px 10px;
+            flex-direction: column;            
 
-            div{
-                display: flex;
-                flex-direction: column;
-
-                .description-title{
-                    font-weight: bold;
-                }
-
-                p, h3{
-                    margin: 2px;
-
-                }
-
+            p{
+                margin: 2px;
 
             }
 
 
-            
         }
+
+
+        
     }
 
 
-    .etiquette{
+    &--new{
         position: absolute;
         right: 10px;
         top: 10px;
@@ -75,12 +77,4 @@
         color: $tertiary-color-darken;
     }
 
-   .heart{
-        font-size: 1.5rem;
-        position: absolute;
-        bottom: 30px;
-        right: 10px;
-    
-       @include heart;
-   }
 }

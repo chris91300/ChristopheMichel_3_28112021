@@ -74,18 +74,6 @@
     border-left-color: #9356DC;
   }
 }
-@-webkit-keyframes showing {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes showing {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes show {
   99% {
     position: absolute;
@@ -102,6 +90,18 @@
     position: static;
   }
 }
+@-webkit-keyframes showing {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showing {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes showUnderline {
   to {
     transform: scaleX(1);
@@ -112,42 +112,12 @@
     transform: scaleX(1);
   }
 }
-@-webkit-keyframes showHeartGradually {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
-  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
-}
-@keyframes showHeartGradually {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  /*from{ background: linear-gradient(to top, $secondary-color 0%, $primary-color 0%, transparent);}
-  to{ background: linear-gradient(to top, $secondary-color, $primary-color 100%);}*/
-}
-@-webkit-keyframes rotationCoche {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: rotate(360deg) translateX(0);
-  }
-}
+/*
+//  ROTATION DE L'ICONE LORS DE L'APPARITION DE LA COCHE DNAS LES MEAL-ITEM
 @keyframes rotationCoche {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: rotate(360deg) translateX(0);
-  }
-}
+    0% {transform: translateX(100%);}
+    100% {transform: rotate(360deg) translateX(0);}
+}*/
 /*
     voir le problème des fonts
 */
@@ -221,6 +191,7 @@ button:not(.heart) {
   transition: box-shadow 0.5s;
   position: relative;
   z-index: 1;
+  margin: 2rem;
 }
 button:not(.heart)::after {
   content: "";
@@ -242,6 +213,42 @@ button:not(.heart):hover::after {
   opacity: 1;
 }
 
+.heart {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.heart--small {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+}
+.heart--big {
+  font-size: 2rem;
+  position: relative;
+}
+.heart .fas {
+  display: flex;
+  position: absolute;
+  top: 4%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.heart .far {
+  opacity: 1;
+}
+.heart:hover {
+  transform-origin: bottom;
+}
+.heart:hover .fas {
+  display: flex;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
 .meal-item {
   display: flex;
   border-radius: 20px;
@@ -249,8 +256,6 @@ button:not(.heart):hover::after {
   overflow: hidden;
   margin: 10px 0;
   transform: translateY(30px);
-  /*position: relative;
-  top: 30px;*/
   opacity: 0;
 }
 @media screen and (min-width: 992px) {
@@ -258,26 +263,26 @@ button:not(.heart):hover::after {
     width: 100%;
   }
 }
-.meal-item .meal-item-container {
+.meal-item-container {
   flex: 1;
   padding: 0.8rem 0.5rem;
   overflow: hidden;
 }
-.meal-item .meal-item-container .meal-item-title {
+.meal-item-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 5px 0;
 }
-.meal-item .meal-item-container .meal-item-description {
+.meal-item-description {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.meal-item .meal-item-container .meal-item-description p {
+.meal-item-description p {
   margin: 0;
 }
-.meal-item .meal-item-container .meal-item-description p:first-child {
+.meal-item-description p:first-child {
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -303,6 +308,16 @@ button:not(.heart):hover::after {
 }
 .meal-item:hover i:before {
   transform: translateX(0%) rotate(0);
+}
+
+.underline {
+  height: 3px;
+  width: 50px;
+  background-color: #99E2D0;
+  transform-origin: left;
+  transform: scaleX(0);
+  -webkit-animation: showUnderline 3s 0s ease-in-out forwards;
+          animation: showUnderline 3s 0s ease-in-out forwards;
 }
 
 header {
@@ -338,36 +353,27 @@ header .fa-arrow-right {
     width: 30%;
   }
 }
-.menu .meal-section .meal-section-title {
+.menu .meal-section-title {
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-.menu .meal-section .underline {
-  height: 3px;
-  width: 50px;
-  background-color: #99E2D0;
-  transform-origin: left;
-  transform: scaleX(0);
-  -webkit-animation: showUnderline 3s 0s ease-in-out forwards;
-          animation: showUnderline 3s 0s ease-in-out forwards;
-}
-.menu .meal-section .meal-list {
+.menu .meal-list {
   display: flex;
   flex-direction: column;
 }
-.menu .meal-section .meal-list .meal-item:nth-child(1) {
+.menu .meal-item:nth-child(1) {
   -webkit-animation: showing 1.5s linear 0.5s forwards;
           animation: showing 1.5s linear 0.5s forwards;
 }
-.menu .meal-section .meal-list .meal-item:nth-child(2) {
+.menu .meal-item:nth-child(2) {
   -webkit-animation: showing 1.5s linear 0.8s forwards;
           animation: showing 1.5s linear 0.8s forwards;
 }
-.menu .meal-section .meal-list .meal-item:nth-child(3) {
+.menu .meal-item:nth-child(3) {
   -webkit-animation: showing 1.5s linear 1.1s forwards;
           animation: showing 1.5s linear 1.1s forwards;
 }
-.menu .meal-section .meal-list .meal-item:nth-child(4) {
+.menu .meal-item:nth-child(4) {
   -webkit-animation: showing 1.5s linear 1.4s forwards;
           animation: showing 1.5s linear 1.4s forwards;
 }
@@ -428,7 +434,8 @@ main > img {
      object-fit: cover;
   max-height: 400px;
 }
-main section {
+
+section {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
@@ -437,49 +444,13 @@ main section {
   margin: auto;
 }
 @media screen and (min-width: 576px) {
-  main section {
+  section {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
   }
 }
-main section > div:first-of-type {
+section > div:first-of-type {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-main section > div:first-of-type .heart {
-  font-size: 2rem;
-  position: relative;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-main section > div:first-of-type .heart .fas {
-  display: flex;
-  position: absolute;
-  top: 4%;
-  opacity: 0;
-  transition: all 0.5s;
-}
-main section > div:first-of-type .heart .far {
-  opacity: 1;
-}
-main section > div:first-of-type .heart:hover {
-  transform-origin: bottom;
-  -webkit-animation: showHeartGradually 1s 0s forwards;
-          animation: showHeartGradually 1s 0s forwards;
-  /*.far{
-      //display: none;
-      //opacity: 0;
-  }*/
-}
-main section > div:first-of-type .heart:hover .fas {
-  display: flex;
-  background: linear-gradient(to top, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-}
-main button:not(.heart) {
-  margin: 2rem;
 }/*# sourceMappingURL=menu.css.map */

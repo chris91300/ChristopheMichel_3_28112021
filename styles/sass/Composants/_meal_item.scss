@@ -8,8 +8,6 @@
     overflow: hidden;
     margin: 10px 0;
     transform: translateY(30px);
-    /*position: relative;
-    top: 30px;*/
     opacity: 0;
 
     @media screen and (min-width : map-get($breakpoints, desktop)) {
@@ -17,36 +15,37 @@
     }
    
 
-    .meal-item-container{
+    &-container{
         flex: 1;
         padding: 0.8rem 0.5rem;
         overflow: hidden;
+    }
 
-        .meal-item-title{
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 5px 0;
-        }
+    &-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 5px 0;
+    }
 
-        .meal-item-description{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+    &-description{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-            p{
-                margin: 0;
+        p{
+            margin: 0;
 
-                &:first-child{
-                    width: 100%;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    height: 20px;
-                    white-space: nowrap;
-                }
+            &:first-child{
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 20px;
+                white-space: nowrap;
             }
         }
     }
+    
 
 
     i{
@@ -57,11 +56,11 @@
         width: 0%;
         background-color: $tertiary-color;
         color: white;
-        transition: all $transition-duration-coche;
+        transition: all $transition-duration-long;
 
         &:before{
             transform: translateX(100%) rotate(-1turn);
-            transition: transform $transition-duration-coche;
+            transition: transform $transition-duration-long;
         }
 
         
@@ -73,7 +72,6 @@
 
        &:before{
         transform: translateX(0%) rotate(0);
-       // animation: rotationCoche 1s 0s linear forwards;
        }
     }
 

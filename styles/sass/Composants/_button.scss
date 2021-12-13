@@ -12,9 +12,10 @@ button:not(.heart){
     cursor: pointer;
     align-self: center;
     box-shadow: 0 2px 4px 0px $shadow-gray;
-    transition: box-shadow 0.5s;
+    transition: box-shadow $transition-duration-long;
     position: relative;
     z-index: 1;
+    margin: 2rem;
 
     &::after{
         content: "";
@@ -26,15 +27,13 @@ button:not(.heart){
         border-radius: 30px;
         background-image: linear-gradient(lighten($secondary-color, 10% ), lighten($primary-color, 10%));
         opacity: 0;
-        transition: opacity 0.5s;
+        transition: opacity $transition-duration-long;
         z-index: -1;
     }
 
 
     &:hover{
-        //background-image: linear-gradient(lighten($secondary-color, 5% ), lighten($primary-color, 5%));
         box-shadow: 0 2px 4px 3px darken($shadow-gray, 40%);
-        //font-weight: bold;
 
         &::after{
             opacity: 1;

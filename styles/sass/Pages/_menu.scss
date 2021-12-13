@@ -13,37 +13,25 @@ main{
         object-fit: cover;
         max-height: 400px;
     }
+}
 
+section{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    top: -60px;
+    background-color: $light-grey;
+    margin: auto;
 
-    section{
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        position: relative;
-        top: -60px;
-        background-color: $light-grey;
-       // max-width: map-get($breakpoints, "mobile-landscape");
-        margin: auto;
-
-        @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-        }
-
-        > div:first-of-type{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .heart {
-                font-size: 2rem;
-                position: relative;
-                @include heart;
-            }
-        }
+    @media screen and (min-width: map-get($breakpoints, "mobile-landscape")) {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
     }
 
-
-    button:not(.heart){
-        margin: 2rem;
+    > div:first-of-type{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
+
